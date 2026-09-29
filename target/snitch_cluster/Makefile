@@ -38,6 +38,9 @@ include $(ROOT)/target/common/common.mk
 REGGEN          ?= $(shell $(BENDER) path register_interface)/vendor/lowrisc_opentitan/util/regtool.py
 CLUSTER_GEN     ?= $(ROOT)/util/clustergen.py
 CLUSTER_GEN_SRC ?= $(wildcard $(ROOT)/util/clustergen/*.py)
+AXI4_GEN        ?= $(ROOT)/util/axi4gen/axi4gen.py
+AXI4_GEN_SRC    ?= $(AXI4_GEN) $(wildcard $(ROOT)/util/axi4gen/*.tpl)
+CIRCT_OPT       ?= circt-opt
 
 #########################
 # Files and directories #
@@ -171,6 +174,12 @@ $(GENERATED_DIR)/memories.json: ${CFG} ${CLUSTER_GEN_PREREQ} | $(GENERATED_DIR)
 $(GENERATED_DIR)/bootdata.cc: ${CFG} ${CLUSTER_GEN_PREREQ} | $(GENERATED_DIR)
 	$(CLUSTER_GEN) -c $< -o $(GENERATED_DIR) --bootdata
 
+# Cluster crossbars, generated with the CIRCT AXI4 dialect
+.PHONY: axi4-xbars
+axi4-xbars: $(GENERATED_DIR)/snitch_cluster_axi4_xbars.sv
+$(GENERATED_DIR)/snitch_cluster_axi4_xbars.sv: ${CFG} ${CLUSTER_GEN_SRC} ${AXI4_GEN_SRC} | $(GENERATED_DIR)
+	$(AXI4_GEN) -c $< -o $@ --build-dir $(GENERATED_DIR)/axi4 --circt-opt $(CIRCT_OPT)
+
 #############
 # Verilator #
 #############
@@ -257,6 +266,7 @@ help:
 	@echo -e "${Blue}$(BIN_DIR)/$(TARGET).vsim ${Black}Build compilation script and compile all sources for Questasim simulation."
 	@echo -e ""
 	@echo -e "${Blue}sw               ${Black}Build all software."
+	@echo -e "${Blue}axi4-xbars       ${Black}Generate the cluster crossbars (set CIRCT_OPT to circt-opt)."
 	@echo -e ""
 	@echo -e "${Blue}clean            ${Black}Clean everything except traces in logs directory."
 	@echo -e "${Blue}clean-bender     ${Black}Clean Bender dependencies."

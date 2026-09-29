@@ -236,6 +236,7 @@ sources:
   # target/snitch_cluster
   - target: snitch_cluster_sim
     files:
+      - target/snitch_cluster/generated/snitch_cluster_axi4_xbars.sv
       - target/snitch_cluster/generated/snitch_cluster_wrapper.sv
   - target: all(snitch_cluster_sim, any(simulation, verilator))
     files:
