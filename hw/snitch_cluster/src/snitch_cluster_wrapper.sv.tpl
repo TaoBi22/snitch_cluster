@@ -213,7 +213,10 @@ ${ssr_cfg(core, '{reg_idx}', '/*None*/ 0', ',')}\
 endpackage
 // verilog_lint: waive-stop package-filename
 
-module ${cfg['name']}_wrapper (
+module ${cfg['name']}_wrapper #(
+  /// Value of `cluster_base_addr_i`; selects the generated crossbars.
+  parameter logic [${cfg['addr_width']-1}:0] ClusterBaseAddr = ${to_sv_hex(cfg['cluster_base_addr'], cfg['addr_width'])}
+) (
   input  logic                                   clk_i,
   input  logic                                   rst_ni,
 % if cfg['enable_debug']:
@@ -338,7 +341,8 @@ module ${cfg['name']}_wrapper (
     .CaqTagWidth (${int(cfg['caq_tag_width'])}),
     .DebugSupport (${int(cfg['enable_debug'])}),
     .AliasRegionEnable (${int(cfg['alias_region_enable'])}),
-    .AliasRegionBase (${int(cfg['alias_region_base'])})
+    .AliasRegionBase (${int(cfg['alias_region_base'])}),
+    .ClusterBaseAddr (ClusterBaseAddr)
   ) i_cluster (
     .clk_i,
     .rst_ni,

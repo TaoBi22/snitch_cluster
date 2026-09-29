@@ -193,7 +193,9 @@ module snitch_cluster
   parameter bit          DebugSupport = 1,
   /// Optional fixed cluster alias region.
   parameter bit          AliasRegionEnable  = 1'b0,
-  parameter logic [PhysicalAddrWidth-1:0] AliasRegionBase    = '0
+  parameter logic [PhysicalAddrWidth-1:0] AliasRegionBase    = '0,
+  /// Value of `cluster_base_addr_i`; selects the generated crossbars.
+  parameter logic [PhysicalAddrWidth-1:0] ClusterBaseAddr    = '0
 ) (
   /// System clock. If `IsoCrossing` is enabled this port is the _fast_ clock.
   /// The slower, half-frequency clock, is derived internally.
@@ -271,50 +273,11 @@ module snitch_cluster
   localparam int unsigned NarrowIdWidthOut = $clog2(NrNarrowMasters) + NarrowIdWidthIn;
 
   localparam int unsigned NrSlaves = 3;
-  localparam int unsigned NrRuleIdcs = NrSlaves - 1;
-  localparam int unsigned NrRules = (1 + AliasRegionEnable) * NrRuleIdcs;
 
   // DMA, SoC Request, `n` instruction caches.
   localparam int unsigned NrWideMasters = 2 + NrHives;
   localparam int unsigned WideIdWidthOut = $clog2(NrWideMasters) + WideIdWidthIn;
-  // DMA X-BAR configuration
   localparam int unsigned NrWideSlaves = 3;
-  localparam int unsigned NrWideRuleIdcs = NrWideSlaves - 1;
-  localparam int unsigned NrWideRules = (1 + AliasRegionEnable) * NrWideRuleIdcs;
-
-  // AXI Configuration
-  localparam axi_pkg::xbar_cfg_t ClusterXbarCfg = '{
-    NoSlvPorts: NrNarrowMasters,
-    NoMstPorts: NrSlaves,
-    MaxMstTrans: NarrowMaxMstTrans,
-    MaxSlvTrans: NarrowMaxSlvTrans,
-    FallThrough: 1'b0,
-    LatencyMode: NarrowXbarLatency,
-    PipelineStages: 0,
-    AxiIdWidthSlvPorts: NarrowIdWidthIn,
-    AxiIdUsedSlvPorts: NarrowIdWidthIn,
-    UniqueIds: 1'b0,
-    AxiAddrWidth: PhysicalAddrWidth,
-    AxiDataWidth: NarrowDataWidth,
-    NoAddrRules: NrRules
-  };
-
-  // DMA configuration struct
-  localparam axi_pkg::xbar_cfg_t DmaXbarCfg = '{
-    NoSlvPorts: NrWideMasters,
-    NoMstPorts: NrWideSlaves,
-    MaxMstTrans: WideMaxMstTrans,
-    MaxSlvTrans: WideMaxSlvTrans,
-    FallThrough: 1'b0,
-    LatencyMode: WideXbarLatency,
-    PipelineStages: 0,
-    AxiIdWidthSlvPorts: WideIdWidthIn,
-    AxiIdUsedSlvPorts: WideIdWidthIn,
-    UniqueIds: 1'b0,
-    AxiAddrWidth: PhysicalAddrWidth,
-    AxiDataWidth: WideDataWidth,
-    NoAddrRules: NrWideRules
-  };
 
   function automatic int unsigned get_hive_size(int unsigned current_hive);
     automatic int n = 0;
@@ -395,12 +358,6 @@ module snitch_cluster
   } dma_events_t;
 
   typedef struct packed {
-    int unsigned idx;
-    addr_t start_addr;
-    addr_t end_addr;
-  } xbar_rule_t;
-
-  typedef struct packed {
     acc_addr_e   addr;
     logic [4:0]  id;
     logic [31:0] data_op;
@@ -452,27 +409,11 @@ module snitch_cluster
   // ---------------------------
   // Cluster-internal Addressing
   // ---------------------------
-  // Calculate start and end address of TCDM based on the `cluster_base_addr_i`.
-  addr_t tcdm_start_address, tcdm_end_address;
+  // Calculate start address of TCDM based on the `cluster_base_addr_i`.
+  addr_t tcdm_start_address;
   assign tcdm_start_address = (cluster_base_addr_i & TCDMMask);
-  assign tcdm_end_address   = (tcdm_start_address + TCDMSize) & TCDMMask;
-
-  addr_t cluster_periph_start_address, cluster_periph_end_address;
-  assign cluster_periph_start_address = tcdm_end_address;
-  assign cluster_periph_end_address   = tcdm_end_address + ClusterPeriphSize * 1024;
-
-  addr_t zero_mem_start_address, zero_mem_end_address;
-  assign zero_mem_start_address = cluster_periph_end_address;
-  assign zero_mem_end_address   = cluster_periph_end_address + ZeroMemorySize * 1024;
 
   localparam addr_t TCDMAliasStart = AliasRegionBase & TCDMMask;
-  localparam addr_t TCDMAliasEnd   = (TCDMAliasStart + TCDMSize) & TCDMMask;
-
-  localparam addr_t PeriphAliasStart = TCDMAliasEnd;
-  localparam addr_t PeriphAliasEnd   = TCDMAliasEnd + ClusterPeriphSize * 1024;
-
-  localparam addr_t ZeroMemAliasStart = PeriphAliasEnd;
-  localparam addr_t ZeroMemAliasEnd   = PeriphAliasEnd + ZeroMemorySize * 1024;
 
   // ----------------
   // Wire Definitions
@@ -569,66 +510,29 @@ module snitch_cluster
     .mst_resp_i (wide_axi_mst_rsp[SoCDMAIn])
   );
 
-  logic [DmaXbarCfg.NoSlvPorts-1:0][$clog2(DmaXbarCfg.NoMstPorts)-1:0] dma_xbar_default_port;
-  xbar_rule_t [DmaXbarCfg.NoAddrRules-1:0] dma_xbar_rule;
-
-  assign dma_xbar_default_port = '{default: SoCDMAOut};
-  assign dma_xbar_rule[NrWideRuleIdcs-1:0] = '{
-    '{
-      idx:        TCDMDMA,
-      start_addr: tcdm_start_address,
-      end_addr:   tcdm_end_address
-    },
-    '{
-      idx:        ZeroMemory,
-      start_addr: zero_mem_start_address,
-      end_addr:   zero_mem_end_address
-    }
-  };
-  if (AliasRegionEnable) begin : gen_dma_xbar_alias
-    assign dma_xbar_rule [NrWideRules-1:NrWideRuleIdcs] = '{
-      '{
-        idx:        TCDMDMA,
-        start_addr: TCDMAliasStart,
-        end_addr:   TCDMAliasEnd
-      },
-      '{
-        idx:        ZeroMemory,
-        start_addr: ZeroMemAliasStart,
-        end_addr:   ZeroMemAliasEnd
-      }
-    };
-  end
-
-  localparam bit [DmaXbarCfg.NoSlvPorts-1:0] DMAEnableDefaultMstPort = '1;
-  axi_xbar #(
-    .Cfg (DmaXbarCfg),
-    .ATOPs (0),
-    .slv_aw_chan_t (axi_mst_dma_aw_chan_t),
-    .mst_aw_chan_t (axi_slv_dma_aw_chan_t),
-    .w_chan_t (axi_mst_dma_w_chan_t),
-    .slv_b_chan_t (axi_mst_dma_b_chan_t),
-    .mst_b_chan_t (axi_slv_dma_b_chan_t),
-    .slv_ar_chan_t (axi_mst_dma_ar_chan_t),
-    .mst_ar_chan_t (axi_slv_dma_ar_chan_t),
-    .slv_r_chan_t (axi_mst_dma_r_chan_t),
-    .mst_r_chan_t (axi_slv_dma_r_chan_t),
+  // Generated by `util/axi4gen`, with the address map of `ClusterBaseAddr`.
+  snitch_cluster_wide_xbar #(
+    .BaseAddr (ClusterBaseAddr),
+    .TCDMSize (TCDMSize),
+    .ClusterPeriphSize (ClusterPeriphSize),
+    .ZeroMemorySize (ZeroMemorySize),
+    .AliasRegionEnable (AliasRegionEnable),
+    .AliasRegionBase (AliasRegionBase),
+    .NrHives (NrHives),
+    .LatencyMode (WideXbarLatency),
+    .MaxMstTrans (WideMaxMstTrans),
+    .MaxSlvTrans (WideMaxSlvTrans),
     .slv_req_t (axi_mst_dma_req_t),
     .slv_resp_t (axi_mst_dma_resp_t),
     .mst_req_t (axi_slv_dma_req_t),
-    .mst_resp_t (axi_slv_dma_resp_t),
-    .rule_t (xbar_rule_t)
+    .mst_resp_t (axi_slv_dma_resp_t)
   ) i_axi_dma_xbar (
     .clk_i (clk_i),
     .rst_ni (rst_ni),
-    .test_i (1'b0),
     .slv_ports_req_i (wide_axi_mst_req),
     .slv_ports_resp_o (wide_axi_mst_rsp),
     .mst_ports_req_o (wide_axi_slv_req),
-    .mst_ports_resp_i (wide_axi_slv_rsp),
-    .addr_map_i (dma_xbar_rule),
-    .en_default_mst_port_i (DMAEnableDefaultMstPort),
-    .default_mst_port_i (dma_xbar_default_port)
+    .mst_ports_resp_i (wide_axi_slv_rsp)
   );
 
   axi_zero_mem #(
@@ -1103,67 +1007,29 @@ module snitch_cluster
     .axi_rsp_i (narrow_axi_mst_rsp[CoreReq])
   );
 
-  logic [ClusterXbarCfg.NoSlvPorts-1:0][$clog2(ClusterXbarCfg.NoMstPorts)-1:0]
-    cluster_xbar_default_port;
-  xbar_rule_t [NrRules-1:0] cluster_xbar_rules;
-
-  assign cluster_xbar_rules [NrRuleIdcs-1:0] = '{
-    '{
-      idx:        TCDM,
-      start_addr: tcdm_start_address,
-      end_addr:   tcdm_end_address
-    },
-    '{
-      idx:        ClusterPeripherals,
-      start_addr: cluster_periph_start_address,
-      end_addr:   cluster_periph_end_address
-    }
-  };
-  if (AliasRegionEnable) begin : gen_cluster_xbar_alias
-    assign cluster_xbar_rules [NrRules-1:NrRuleIdcs] = '{
-      '{
-        idx:        TCDM,
-        start_addr: TCDMAliasStart,
-        end_addr:   TCDMAliasEnd
-      },
-      '{
-        idx:        ClusterPeripherals,
-        start_addr: PeriphAliasStart,
-        end_addr:   PeriphAliasEnd
-      }
-    };
-  end
-
-  localparam bit [ClusterXbarCfg.NoSlvPorts-1:0] ClusterEnableDefaultMstPort = '1;
-  axi_xbar #(
-    .Cfg (ClusterXbarCfg),
-    .slv_aw_chan_t (axi_mst_aw_chan_t),
-    .mst_aw_chan_t (axi_slv_aw_chan_t),
-    .w_chan_t (axi_mst_w_chan_t),
-    .slv_b_chan_t (axi_mst_b_chan_t),
-    .mst_b_chan_t (axi_slv_b_chan_t),
-    .slv_ar_chan_t (axi_mst_ar_chan_t),
-    .mst_ar_chan_t (axi_slv_ar_chan_t),
-    .slv_r_chan_t (axi_mst_r_chan_t),
-    .mst_r_chan_t (axi_slv_r_chan_t),
+  // Generated by `util/axi4gen`, with the address map of `ClusterBaseAddr`.
+  snitch_cluster_narrow_xbar #(
+    .BaseAddr (ClusterBaseAddr),
+    .TCDMSize (TCDMSize),
+    .ClusterPeriphSize (ClusterPeriphSize),
+    .ZeroMemorySize (ZeroMemorySize),
+    .AliasRegionEnable (AliasRegionEnable),
+    .AliasRegionBase (AliasRegionBase),
+    .LatencyMode (NarrowXbarLatency),
+    .MaxMstTrans (NarrowMaxMstTrans),
+    .MaxSlvTrans (NarrowMaxSlvTrans),
     .slv_req_t (axi_mst_req_t),
     .slv_resp_t (axi_mst_resp_t),
     .mst_req_t (axi_slv_req_t),
-    .mst_resp_t (axi_slv_resp_t),
-    .rule_t (xbar_rule_t)
+    .mst_resp_t (axi_slv_resp_t)
   ) i_cluster_xbar (
     .clk_i,
     .rst_ni,
-    .test_i (1'b0),
     .slv_ports_req_i (narrow_axi_mst_req),
     .slv_ports_resp_o (narrow_axi_mst_rsp),
     .mst_ports_req_o (narrow_axi_slv_req),
-    .mst_ports_resp_i (narrow_axi_slv_rsp),
-    .addr_map_i (cluster_xbar_rules),
-    .en_default_mst_port_i (ClusterEnableDefaultMstPort),
-    .default_mst_port_i (cluster_xbar_default_port)
+    .mst_ports_resp_i (narrow_axi_slv_rsp)
   );
-  assign cluster_xbar_default_port = '{default: SoC};
 
   // Optionally decouple the external narrow AXI slave port.
   axi_cut #(
@@ -1301,6 +1167,8 @@ module snitch_cluster
   `ASSERT_INIT(CheckSuperBankFactor, (NrBanks % BanksPerSuperBank) == 0);
   // Check that the cluster base address aligns to the TCDMSize.
   `ASSERT(ClusterBaseAddrAlign, ((TCDMSize - 1) & cluster_base_addr_i) == 0)
+  // Check that the cluster base address is the one the crossbars were generated for.
+  `ASSERT(ClusterBaseAddrParam, cluster_base_addr_i == ClusterBaseAddr)
   // Check that the cluster alias address, if enabled, aligns to the TCDMSize.
   `ASSERT_INIT(AliasRegionAddrAlign, ~AliasRegionEnable || ((TCDMSize - 1) & AliasRegionBase) == 0)
   // Make sure we only have one DMA in the system.
