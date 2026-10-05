@@ -96,26 +96,26 @@ add wave -noupdate -group {Wide Out} /tb_bin/i_dut/wide_out_req.w
 add wave -noupdate -group {Wide Out} /tb_bin/i_dut/wide_out_req.w_valid
 add wave -noupdate -group {Wide Out} /tb_bin/i_dut/wide_out_resp.w_ready
 add wave -noupdate -group {Wide Out} /tb_bin/i_dut/wide_out_req.w.last
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].aw_valid}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_resp_o[0].aw_ready}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].aw.addr}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].ar_valid}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_resp_o[0].ar_ready}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].ar.addr}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].w_valid}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_resp_o[0].w_ready}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_resp_o[0].r_valid}
-add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/slv_ports_req_i[0].r_ready}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].aw_valid}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_resp_i[0].aw_ready}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].aw.addr}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].ar_valid}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_resp_i[0].ar_ready}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].ar.addr}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].w_valid}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_resp_i[0].w_ready}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_resp_i[0].r_valid}
-add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/i_axi_dma_xbar/mst_ports_req_o[0].r_ready}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].aw_valid}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_resp_o[0].aw_ready}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].aw.addr}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].ar_valid}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_resp_o[0].ar_ready}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].ar.addr}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].w_valid}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_resp_o[0].w_ready}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_resp_o[0].r_valid}
+add wave -noupdate -group {DMA Xbar DMA port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/slv_ports_req_i[0].r_ready}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].aw_valid}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_resp_i[0].aw_ready}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].aw.addr}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].ar_valid}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_resp_i[0].ar_ready}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].ar.addr}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].w_valid}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_resp_i[0].w_ready}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_resp_i[0].r_valid}
+add wave -noupdate -group {DMA Xbar TCDM port} {/tb_bin/i_dut/i_snitch_cluster/i_cluster/gen_wide_xbar/i_axi_dma_xbar/mst_ports_req_o[0].r_ready}
 add wave -noupdate -group {Narrow Out} /tb_bin/i_dut/i_snitch_cluster/i_cluster/narrow_out_resp_i.r
 add wave -noupdate -group {Narrow Out} /tb_bin/i_dut/i_snitch_cluster/i_cluster/narrow_out_resp_i.r_valid
 add wave -noupdate -group {Narrow Out} /tb_bin/i_dut/i_snitch_cluster/i_cluster/narrow_out_req_o.r_ready

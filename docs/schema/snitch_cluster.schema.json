@@ -89,6 +89,11 @@
                 64
             ]
         },
+        "external_xbars": {
+            "type": "boolean",
+            "description": "Leave the narrow and wide crossbars out of the cluster and expose their manager and subordinate ports instead, for an interconnect described outside the cluster.",
+            "default": false
+        },
         "alias_region_enable": {
             "type": "boolean",
             "description": "Whether to provide a hardwired alias region for the TCDM (and cluster) address space.",

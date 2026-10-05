@@ -235,6 +235,17 @@ module ${cfg['name']}_wrapper #(
 % if cfg['sram_cfg_expose']:
   input  ${cfg['pkg_name']}::sram_cfgs_t         sram_cfgs_i,
 %endif
+% if cfg['external_xbars']:
+  // The crossbars' ports, indexed as in `snitch_pkg`; the interconnect is outside the cluster.
+  output ${cfg['pkg_name']}::narrow_in_req_t   [2:0] narrow_mgr_req_o,
+  input  ${cfg['pkg_name']}::narrow_in_resp_t  [2:0] narrow_mgr_resp_i,
+  input  ${cfg['pkg_name']}::narrow_out_req_t  [2:0] narrow_sub_req_i,
+  output ${cfg['pkg_name']}::narrow_out_resp_t [2:0] narrow_sub_resp_o,
+  output ${cfg['pkg_name']}::wide_in_req_t     [${cfg['nr_hives'] + 1}:0] wide_mgr_req_o,
+  input  ${cfg['pkg_name']}::wide_in_resp_t    [${cfg['nr_hives'] + 1}:0] wide_mgr_resp_i,
+  input  ${cfg['pkg_name']}::wide_out_req_t    [2:0] wide_sub_req_i,
+  output ${cfg['pkg_name']}::wide_out_resp_t   [2:0] wide_sub_resp_o
+% else:
   input  ${cfg['pkg_name']}::narrow_in_req_t     narrow_in_req_i,
   output ${cfg['pkg_name']}::narrow_in_resp_t    narrow_in_resp_o,
   output ${cfg['pkg_name']}::narrow_out_req_t    narrow_out_req_o,
@@ -243,6 +254,7 @@ module ${cfg['name']}_wrapper #(
   input  ${cfg['pkg_name']}::wide_out_resp_t     wide_out_resp_i,
   input  ${cfg['pkg_name']}::wide_in_req_t       wide_in_req_i,
   output ${cfg['pkg_name']}::wide_in_resp_t      wide_in_resp_o
+% endif
 );
 
   localparam int unsigned NumIntOutstandingLoads [${cfg['nr_cores']}] = '{${core_cfg('num_int_outstanding_loads')}};
@@ -342,7 +354,8 @@ module ${cfg['name']}_wrapper #(
     .DebugSupport (${int(cfg['enable_debug'])}),
     .AliasRegionEnable (${int(cfg['alias_region_enable'])}),
     .AliasRegionBase (${int(cfg['alias_region_base'])}),
-    .ClusterBaseAddr (ClusterBaseAddr)
+    .ClusterBaseAddr (ClusterBaseAddr),
+    .ExternalXbars (${int(cfg['external_xbars'])})
   ) i_cluster (
     .clk_i,
     .rst_ni,
@@ -371,6 +384,24 @@ module ${cfg['name']}_wrapper #(
 % else:
     .sram_cfgs_i (${cfg['pkg_name']}::sram_cfgs_t'('0)),
 %endif
+% if cfg['external_xbars']:
+    .narrow_in_req_i ('0),
+    .narrow_in_resp_o (),
+    .narrow_out_req_o (),
+    .narrow_out_resp_i ('0),
+    .wide_out_req_o (),
+    .wide_out_resp_i ('0),
+    .wide_in_req_i ('0),
+    .wide_in_resp_o (),
+    .narrow_mgr_req_o,
+    .narrow_mgr_resp_i,
+    .narrow_sub_req_i,
+    .narrow_sub_resp_o,
+    .wide_mgr_req_o,
+    .wide_mgr_resp_i,
+    .wide_sub_req_i,
+    .wide_sub_resp_o
+% else:
     .narrow_in_req_i,
     .narrow_in_resp_o,
     .narrow_out_req_o,
@@ -378,6 +409,15 @@ module ${cfg['name']}_wrapper #(
     .wide_out_req_o,
     .wide_out_resp_i,
     .wide_in_req_i,
-    .wide_in_resp_o
+    .wide_in_resp_o,
+    .narrow_mgr_req_o (),
+    .narrow_mgr_resp_i ('0),
+    .narrow_sub_req_i ('0),
+    .narrow_sub_resp_o (),
+    .wide_mgr_req_o (),
+    .wide_mgr_resp_i ('0),
+    .wide_sub_req_i ('0),
+    .wide_sub_resp_o ()
+% endif
   );
 endmodule
