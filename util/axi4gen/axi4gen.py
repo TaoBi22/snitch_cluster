@@ -157,9 +157,25 @@ def ports(addr_width, data_width, ids, trans, atops):
             f"concurrent_reads_per_id = {per_id(trans)}" + (" {pulp.atops}" if atops else ""))
 
 
-def pulp_config(latency, trans):
-    return (f'PULP_CONFIG_LatencyMode = "axi_pkg::{latency}", '
-            f"PULP_CONFIG_MaxSlvTrans = {trans} : i32, PULP_CONFIG_FallThrough = false")
+# The latency modes whose registers are cuts on whole ports: (inputs, outputs).
+PORT_CUTS = {
+    "NO_LATENCY": (False, False),
+    "CUT_SLV_PORTS": (True, False),
+    "CUT_MST_PORTS": (False, True),
+    "CUT_ALL_PORTS": (True, True),
+}
+
+
+def pulp_config(latency):
+    # Other latency modes stay inside the crossbar.
+    return "" if latency in PORT_CUTS else f' {{PULP_CONFIG_LatencyMode = "axi_pkg::{latency}"}}'
+
+
+def cut(name, value, cuts):
+    """MLIR for a cut named `name` on `value` if `cuts`, and the resulting value."""
+    if not cuts:
+        return "", value
+    return f"  %{name}_cut = axi4.dummies.cut %clk, %rst_ni, {value}\n", f"%{name}_cut"
 
 
 def xbar_module(xbars, side, k, base):
@@ -171,23 +187,28 @@ def xbar_module(xbars, side, k, base):
     connectivity = {mgr: list(sub_windows) for mgr in s["mgrs"]}
     mgr = ports(xbars.addr_width, s["data_width"], s["mgr_ids"], s["trans"], s["atops"])
     sub = ports(xbars.addr_width, s["data_width"], s["sub_ids"], s["trans"], s["atops"])
-    mgrs = "\n".join(f'  %{m}_mgr, %{m}_mgr_access = axi4.dummies.ext_manager "{m}" '
-                     f"%clk, %rst_ni {mgr}" for m in s["mgrs"])
-    subs = "\n".join(f'  %{t}_access = axi4.dummies.ext_subordinate "{t}" %clk, %rst_ni, %xbar\n'
-                     f"    windows <{window_set(t, windows, sub_windows)}>\n    {sub}"
-                     for t in sub_windows)
+    in_cuts, out_cuts = PORT_CUTS.get(s["latency"], (False, False))
+    mgrs, mgr_values = "", []
+    for m in s["mgrs"]:
+        cut_code, value = cut(f"{m}_mgr", f"%{m}_mgr", in_cuts)
+        mgrs += (f'  %{m}_mgr, %{m}_mgr_access = axi4.dummies.ext_manager "{m}" '
+                 f"%clk, %rst_ni {mgr}\n{cut_code}")
+        mgr_values.append(value)
+    subs = ""
+    for t in sub_windows:
+        cut_code, value = cut(t, "%xbar", out_cuts)
+        subs += (f'{cut_code}  %{t}_access = axi4.dummies.ext_subordinate "{t}" %clk, %rst_ni, '
+                 f"{value}\n    windows <{window_set(t, windows, sub_windows)}>\n    {sub}\n")
     return f"""// {side.capitalize()} crossbar of the cluster at {base:#x}
 
 hw.module @snitch_cluster_{side}_xbar_{k}(in %clk : !seq.clock, in %rst_ni : i1) {{
 {mgrs}
-
-  %xbar = axi4.dummies.xbar %clk, %rst_ni mgrs {', '.join(f'%{m}_mgr' for m in s["mgrs"])}
+  %xbar = axi4.dummies.xbar %clk, %rst_ni mgrs {', '.join(mgr_values)}
     addr_width = {xbars.addr_width}, data_width = {s["data_width"]},
-    upstream_concurrent_per_id = {per_id(s["trans"])}
-    {{{pulp_config(s["latency"], s["trans"])}}}
+    upstream_concurrent_per_id = {per_id(s["trans"])}, downstream_pending_writes = {s["trans"]}
+    {pulp_config(s["latency"])}
 
 {subs}
-
 {accesses(connectivity, windows, sub_windows)}
 }}
 """
