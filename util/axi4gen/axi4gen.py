@@ -73,10 +73,10 @@ class ClusterXbars:
             "mgrs": mgrs,
             "subs": subs,
             "atops": atops,
-            # The lowering sizes each port's ID as clog2(outstanding): the managers' as the
+            # The lowering sizes each port's ID as clog2(outstanding_*_ids): the managers' as the
             # cluster's, the subordinates' widened by the crossbar's clog2(#managers)
-            "mgr_outstanding": 2 ** id_width_in,
-            "sub_outstanding": 2 ** (id_width_in + clog2(len(mgrs))),
+            "mgr_ids": 2 ** id_width_in,
+            "sub_ids": 2 ** (id_width_in + clog2(len(mgrs))),
         }
 
     def check_bases(self, bases):
@@ -144,16 +144,22 @@ def with_soc_out(windows, sub_windows, addr_width):
 # =============================================================================
 
 
-def ports(addr_width, data_width, outstanding, atops):
+def per_id(trans):
+    """Requests per ID a crossbar input admits; the lowering sets `MaxMstTrans` to this plus one."""
+    return trans - 1
+
+
+def ports(addr_width, data_width, ids, trans, atops):
+    # The cluster has no per-endpoint counts per ID, so endpoints match the crossbar.
     return (f"addr_width = {addr_width}, data_width = {data_width}, "
-            f"outstanding_writes = {outstanding}, outstanding_reads = {outstanding}"
-            + (" {pulp.atops}" if atops else ""))
+            f"outstanding_write_ids = {ids}, outstanding_read_ids = {ids}, "
+            f"concurrent_writes_per_id = {per_id(trans)}, "
+            f"concurrent_reads_per_id = {per_id(trans)}" + (" {pulp.atops}" if atops else ""))
 
 
 def pulp_config(latency, trans):
     return (f'PULP_CONFIG_LatencyMode = "axi_pkg::{latency}", '
-            f"PULP_CONFIG_MaxSlvTrans = {trans} : i32, PULP_CONFIG_MaxMstTrans = {trans} : i32, "
-            "PULP_CONFIG_FallThrough = false")
+            f"PULP_CONFIG_MaxSlvTrans = {trans} : i32, PULP_CONFIG_FallThrough = false")
 
 
 def xbar_module(xbars, side, k, base):
@@ -163,8 +169,8 @@ def xbar_module(xbars, side, k, base):
                                         xbars.addr_width)
     # The handwritten crossbar connects every manager to every subordinate
     connectivity = {mgr: list(sub_windows) for mgr in s["mgrs"]}
-    mgr = ports(xbars.addr_width, s["data_width"], s["mgr_outstanding"], s["atops"])
-    sub = ports(xbars.addr_width, s["data_width"], s["sub_outstanding"], s["atops"])
+    mgr = ports(xbars.addr_width, s["data_width"], s["mgr_ids"], s["trans"], s["atops"])
+    sub = ports(xbars.addr_width, s["data_width"], s["sub_ids"], s["trans"], s["atops"])
     mgrs = "\n".join(f'  %{m}_mgr, %{m}_mgr_access = axi4.dummies.ext_manager "{m}" '
                      f"%clk, %rst_ni {mgr}" for m in s["mgrs"])
     subs = "\n".join(f'  %{t}_access = axi4.dummies.ext_subordinate "{t}" %clk, %rst_ni, %xbar\n'
@@ -176,7 +182,8 @@ hw.module @snitch_cluster_{side}_xbar_{k}(in %clk : !seq.clock, in %rst_ni : i1)
 {mgrs}
 
   %xbar = axi4.dummies.xbar %clk, %rst_ni mgrs {', '.join(f'%{m}_mgr' for m in s["mgrs"])}
-    addr_width = {xbars.addr_width}, data_width = {s["data_width"]}
+    addr_width = {xbars.addr_width}, data_width = {s["data_width"]},
+    upstream_concurrent_per_id = {per_id(s["trans"])}
     {{{pulp_config(s["latency"], s["trans"])}}}
 
 {subs}
@@ -246,8 +253,8 @@ def selectors(xbars):
             "MaxSlvTrans": ("int unsigned", "0", s["trans"]),
         }
 
-    def bits(s, outstanding):
-        return req_resp_bits(xbars.addr_width, s["data_width"], clog2(outstanding),
+    def bits(s, ids):
+        return req_resp_bits(xbars.addr_width, s["data_width"], clog2(ids),
                              s["user_width"])
 
     narrow, wide = xbars.sides["narrow"], xbars.sides["wide"]
@@ -258,8 +265,8 @@ def selectors(xbars):
                  "ptw": "snitch_pkg::PTW"},
         "subs": {"tcdm": "snitch_pkg::TCDM", "periph": "snitch_pkg::ClusterPeripherals",
                  "soc_out": "snitch_pkg::SoC"},
-        "mgr_bits": bits(narrow, narrow["mgr_outstanding"]),
-        "sub_bits": bits(narrow, narrow["sub_outstanding"]),
+        "mgr_bits": bits(narrow, narrow["mgr_ids"]),
+        "sub_bits": bits(narrow, narrow["sub_ids"]),
         "checks": dict(sizes, **config(narrow)),
     }, {
         "name": "snitch_cluster_wide_xbar",
@@ -268,8 +275,8 @@ def selectors(xbars):
                         for i in range(xbars.nr_hives)}),
         "subs": {"tcdm": "snitch_pkg::TCDMDMA", "zero_mem": "snitch_pkg::ZeroMemory",
                  "soc_out": "snitch_pkg::SoCDMAOut"},
-        "mgr_bits": bits(wide, wide["mgr_outstanding"]),
-        "sub_bits": bits(wide, wide["sub_outstanding"]),
+        "mgr_bits": bits(wide, wide["mgr_ids"]),
+        "sub_bits": bits(wide, wide["sub_ids"]),
         "checks": dict(sizes, NrHives=("int unsigned", "0", xbars.nr_hives), **config(wide)),
     }]
 
