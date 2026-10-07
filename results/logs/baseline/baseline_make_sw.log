@@ -1,0 +1,684 @@
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+make -C sw/math all
+make -C sw/runtime/banshee all
+make -C sw/runtime/rtl all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/banshee'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/banshee'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl'
+make -C sw/apps/lto all
+make -C sw/apps/nop all
+make -C sw/apps/blas/axpy all
+make -C sw/apps/blas/gemm all
+make -C sw/apps/dnn/batchnorm all
+make -C sw/apps/dnn/conv2d all
+make -C sw/apps/dnn/fusedconv all
+make -C sw/apps/dnn/gelu all
+make -C sw/apps/dnn/layernorm all
+make -C sw/apps/dnn/maxpool all
+make -C sw/apps/dnn/softmax all
+make -C sw/apps/dnn/flashattention_2 all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data/data.h
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data/data.h
+make -C sw/apps/dnn/concat all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/data/data.h
+make -C sw/apps/dnn/fused_concat_linear all
+make -C sw/apps/montecarlo/pi_estimation all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data/data.h
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data/data.h
+make -C sw/apps/atax all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data/data.h
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/data/data.h
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/nop'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/lto'
+make[1]: Nothing to be done for 'all'.
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/nop'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/lto'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/data/data.h
+make -C sw/apps/correlation all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear'
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/scripts/datagen.py -c /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/data/params.json --section="" /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/data/data.h
+make -C sw/apps/covariance all
+make -C sw/tests all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/layernorm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/layernorm'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/covariance'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/covariance'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/correlation'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/correlation'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests'
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -MM -MT '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf' /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.d
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.elf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/clang -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/data -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src -I/home/bea/snitch-axi4-xbars/sc/sw/dnn/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/../common -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/api/omp -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src -I/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/omp -I/home/bea/snitch-axi4-xbars/sc/sw/blas -I/home/bea/snitch-axi4-xbars/sc/sw/deps/riscv-opcodes -I/home/bea/snitch-axi4-xbars/sc/sw/math/include -mcpu=snitch -menable-experimental-extensions -mabi=ilp32d -mcmodel=medany -fno-builtin-printf -fno-builtin-sqrtf -fno-common -fopenmp -ftls-model=local-exec -O3 -D__DEFINED_uint64_t -fuse-ld=/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/ld.lld -nostartfiles -nostdlib -lc -L/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/../lib/clang/12.0.1/lib/ -lclang_rt.builtins-riscv32 -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl -T/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/base.ld -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math/build/ -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/build/ -lmath -lsnRuntime /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/src/main.c:10:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data/data.h:20:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [1][8][8][32]' [-Wincompatible-pointer-types]
+        .ifmap = ifmap,
+                 ^~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/maxpool/data/data.h:21:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [1][4][4][32]' [-Wincompatible-pointer-types]
+        .ofmap = ofmap
+                 ^~~~~
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:202:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h:37:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h:8:
+/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h:16:9: warning: 'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/src/main.c:9:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data/data.h:15:11: warning: incompatible pointer types initializing 'float *' with an expression of type 'float [3][16][4]' [-Wincompatible-pointer-types]
+        .ifmap = ifmap,
+                 ^~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/softmax/data/data.h:16:11: warning: incompatible pointer types initializing 'float *' with an expression of type 'float [3][16][4]' [-Wincompatible-pointer-types]
+        .ofmap = ofmap,
+                 ^~~~~
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:In file included from 152/home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c::437::
+ In file included from note/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h: :passing argument to parameter 'ptr' here204
+:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:                           volatile void *ptr) {333
+:                                          ^46
+: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.cIn file included from :/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c7::
+5In file included from :
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.hIn file included from :/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h204::
+204/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:
+:/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h416::33423::47 :warning : warningpassing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]: 
+passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h
+:/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h146::15242::43 :note : notepassing argument to parameter 'ptr' here: 
+passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^                           volatile void *ptr) {
+
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204In file included from :
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h::7333:
+:In file included from 46/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:: 204warning:
+: /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.hpassing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]:
+334:47    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);:
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~warning
+: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+:/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h :note152: :passing argument to parameter 'ptr' here43
+:                           volatile void *ptr) {note
+:                                          ^passing argument to parameter 'ptr' here
+
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: In file included from warning/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c: :passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]5
+:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);204
+:
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h
+:416/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h::23146:: 42warning::  passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]note
+: passing argument to parameter 'ptr' here
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                          volatile void *ptr) {
+
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h                                         ^:
+146:42: note: passing argument to parameter 'ptr' here
+In file included from                           volatile void *ptr) {/home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c
+:                                         ^7
+:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:In file included from 418/home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c::245::
+ In file included from warning/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h: :passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]204
+:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);24
+:                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+warning/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h: :passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]152
+:43:                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]); 
+note                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~: 
+passing argument to parameter 'ptr' here/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h
+:152:                           volatile void *ptr) {43
+:                                          ^ 
+note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/flashattention_2/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/src/main.c:8:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data/data.h:39:15: warning: incompatible pointer types initializing 'float *' with an expression of type 'float [5][5][16]' [-Wincompatible-pointer-types]
+        .pInBuffer = fusedconv_pInBuffer_dram,
+                     ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data/data.h:40:13: warning: incompatible pointer types initializing 'float *' with an expression of type 'float [16][3][3][16]' [-Wincompatible-pointer-types]
+        .pWeight = fusedconv_pWeight_dram,
+                   ^~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/fusedconv/data/data.h:43:16: warning: incompatible pointer types initializing 'float *' with an expression of type 'float [3][3][16]' [-Wincompatible-pointer-types]
+        .pOutBuffer = fusedconv_pOutBuffer_dram,
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/src/main.c:7:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data/data.h:19:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [1][8][8][32]' [-Wincompatible-pointer-types]
+        .ifmap = ifmap,
+                 ^~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/batchnorm/data/data.h:20:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [1][8][8][32]' [-Wincompatible-pointer-types]
+        .ofmap = ofmap,
+                 ^~~~~
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/gelu/src/main.c:5:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/conv2d.h:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h/home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c::397::
+9In file included from :/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h :warning202: :
+'INFINITY' macro redefined [-Wmacro-redefined]In file included from 
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../batchnorm/src/batchnorm.h:5#define INFINITY 0x7f800000:
+
+In file included from         ^/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl/src/snrt.h
+:/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h37::
+16In file included from :/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/sync.h9::8 :
+note/home/bea/snitch-axi4-xbars/sc/sw/math/include/math.h: :previous definition is here16
+:9:#define INFINITY  __builtin_inff() 
+warning        ^: 
+'INFINITY' macro redefined [-Wmacro-redefined]
+#define INFINITY  __builtin_inff()
+        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:39:9: note: previous definition is here
+#define INFINITY 0x7f800000
+        ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:8:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:8:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/src/main.c:12:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data/data.h:21:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [32][4][8]' [-Wincompatible-pointer-types]
+        .ifmap = conv2d_ifmap_dram,
+                 ^~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data/data.h:22:13: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [8][32][3][3]' [-Wincompatible-pointer-types]
+        .weights = conv2d_weights_dram,
+                   ^~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/conv2d/data/data.h:23:11: warning: incompatible pointer types initializing 'double *' with an expression of type 'double [8][4][8]' [-Wincompatible-pointer-types]
+        .ofmap = conv2d_ofmap_dram,
+                 ^~~~~~~~~~~~~~~~~
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:333:46: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_read(SNRT_SSR_DM0, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:334:47: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+    snrt_ssr_write(SNRT_SSR_DM1, SNRT_SSR_4D, &pBuffer[compute_id * 2]);
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:416:23: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                      &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:146:42: note: passing argument to parameter 'ptr' here
+                          volatile void *ptr) {
+                                         ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:204:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../conv2d/src/conv2d.h:418:24: warning: passing 'const float *' to parameter of type 'volatile void *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                       &pBuffer[h_cleanup_index * h_stride + compute_id * 2]);
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/bea/snitch-axi4-xbars/sc/sw/snRuntime/src/ssr.h:152:43: note: passing argument to parameter 'ptr' here
+                           volatile void *ptr) {
+                                          ^
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/src/main.c:7:
+In file included from /home/bea/snitch-axi4-xbars/sc/sw/dnn/src/dnn.h:208:
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:100:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:114:25: warning: enumeration values 'BASELINE', 'NAIVE_UNROLLED', and 'OPT_EX' not handled in switch [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:128:25: warning: 4 enumeration values not handled in switch: 'BASELINE', 'NAIVE', 'NAIVE_UNROLLED'... [-Wswitch]
+                switch (l.implementation) {
+                        ^
+/home/bea/snitch-axi4-xbars/sc/sw/dnn/src/../layernorm/src/layernorm.h:98:17: warning: enumeration value 'FP64' not handled in switch [-Wswitch]
+        switch (l.dtype) {
+                ^
+11 warnings generated.
+11 warnings generated.
+9 warnings generated.
+9 warnings generated.
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax/build/softmax.dwarf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.dwarf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu/build/gelu.dwarf
+11 warnings generated.
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.dwarf
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax'
+12 warnings generated.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool'
+9 warnings generated.
+9 warnings generated.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu'
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d/build/conv2d.dwarf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.dwarf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2/build/flashattention_2.dwarf
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.dwarf
+12 warnings generated.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2'
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-objdump --mcpu=snitch -D /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.dump
+/home/bea/tools/pulp-llvm/riscv32-pulp-llvm-centos7-0.12.0/bin/llvm-dwarfdump /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.elf > /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv/build/fusedconv.dwarf
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv'

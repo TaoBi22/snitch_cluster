@@ -1,0 +1,61 @@
+dropped "$ROOT/.bender/git/checkouts/common_verification-67b1cff57853a398/test/tb_clk_rst_gen.sv"
+dropped empty vlogan call
+dropped "$ROOT/.bender/git/checkouts/tech_cells_generic-610ebe98605957e7/test/tb_tc_sram.sv"
+dropped empty vlogan call
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/addr_decode_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/cb_filter_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/cdc_2phase_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/cdc_2phase_clearable_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/cdc_fifo_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/cdc_fifo_clearable_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/fifo_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/graycode_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/id_queue_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/passthrough_stream_fifo_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/popcount_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/rr_arb_tree_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/stream_register_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/stream_to_mem_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/sub_per_hash_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/isochronous_crossing_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/stream_omega_net_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/stream_xbar_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/clk_int_div_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/clk_int_div_static_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/clk_mux_glitch_free_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/common_cells-aa028fdb314cdab0/test/lossy_valid_to_stream_tb.sv"
+dropped "$ROOT/.bender/git/checkouts/apb-0b8df27abad700ff/test/tb_apb_regs.sv" \
+dropped "$ROOT/.bender/git/checkouts/apb-0b8df27abad700ff/test/tb_apb_cdc.sv" \
+dropped "$ROOT/.bender/git/checkouts/apb-0b8df27abad700ff/test/tb_apb_demux.sv"
+dropped empty vlogan call
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_addr_test.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_atop_filter.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_bus_compare.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_cdc.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_delayer.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_dw_downsizer.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_dw_upsizer.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_fifo.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_isolate.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_dw_converter.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_mailbox.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_regs.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_iw_converter.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_to_apb.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_to_axi.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_lite_xbar.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_modify_address.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_serializer.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_sim_mem.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_slave_compare.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_to_axi_lite.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_to_mem_banked.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi-10c18867bc585e38/test/tb_axi_xbar.sv"
+dropped "$ROOT/.bender/git/checkouts/axi_stream-8730fb4f6af32dfe/test/tb_axi_stream_dw_downsizer.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi_stream-8730fb4f6af32dfe/test/tb_axi_stream_dw_upsizer.sv"
+dropped "$ROOT/.bender/git/checkouts/axi_riscv_atomics-360637610c0ab464/test/axi_riscv_atomics_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/axi_riscv_atomics-360637610c0ab464/test/axi_riscv_lrsc_tb.sv"
+dropped "$ROOT/.bender/git/checkouts/cluster_icache-613ab7e739e3175c/test/snitch_icache_l0_tb.sv" \
+dropped "$ROOT/.bender/git/checkouts/cluster_icache-613ab7e739e3175c/test/snitch_read_only_cache_tb.sv"
+dropped empty vlogan call
+dropped 56 files

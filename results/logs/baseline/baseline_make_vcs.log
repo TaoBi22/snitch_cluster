@@ -1,0 +1,332 @@
+mkdir -p bin
+vcs -j24 -ignore initializer_driver_checks -Mlib=work-vcs -Mdir=work-vcs -o bin/snitch_cluster.vcs -cc cc -cpp g++ \
+	-assert disable_cover -override_timescale=1ns/1ps -full64 tb_bin /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/bootrom.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/ipc.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/rtl_lib.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/common_lib.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/bootdata.cc \
+	-CFLAGS "-std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test" -LDFLAGS "-L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/lib" -lfesvr
+/usr/synopsys/vcs/W-2024.09-1/bin/vcsMsgReport: line 276: /usr/synopsys/vcs/W-2024.09-1/linux/bin/vcsMsgReport1: No such file or directory
+Doing common elaboration 
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'AlmaLinux release 9.8 (Olive Jaguar)' is not supported on 
+  'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+*** Using c compiler cc instead of cc ...
+                         Chronologic VCS (TM)
+        Version W-2024.09-1_Full64 -- Tue Sep 29 17:05:33 2026
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Top Level Modules:
+       tb_bin
+TimeScale is 1 ns / 1 ps
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+112 modules and 0 UDP read.
+recompiling module axi_burst_splitter_counters
+recompiling module mem_wide_narrow_mux
+recompiling module axi_err_slv
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module axi_res_tbl
+recompiling module snitch_l0_tlb
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module prim_subreg_ext
+recompiling package riscv_instr
+recompiling module axi_burst_splitter_counters
+recompiling module axi_lite_to_reg
+recompiling module stream_arbiter
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module stream_fifo_optimal_wrap
+recompiling module onehot_to_bin
+recompiling module tb_memory_regbus
+recompiling module fpnew_classifier
+recompiling module stream_register
+recompiling module axi_cut
+recompiling module AXI_LITE
+recompiling module axi_mux
+recompiling module id_queue
+recompiling module reqrsp_iso
+recompiling module lzc
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module idma_inst64_events
+recompiling module lzc
+recompiling module counter
+recompiling module axi_cut
+recompiling package idma_inst64_snitch_pkg
+recompiling module axi_to_reg
+recompiling module axi_riscv_amos
+recompiling module fpnew_opgroup_block
+recompiling module axi_id_prepend
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling package snitch_cluster_pkg
+recompiling module spill_register
+recompiling module axi_mux
+recompiling module reqrsp_mux
+recompiling module fpnew_cast_multi
+recompiling module reqrsp_to_tcdm
+recompiling module lfsr_sr
+recompiling module fifo_v3
+recompiling module axi_res_tbl
+recompiling module snitch_l0_tlb
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module axi_cut
+recompiling package idma_pkg
+recompiling module snitch_cluster_peripheral
+recompiling module axi_demux
+recompiling module axi_demux_id_counters
+recompiling module rr_arb_tree
+recompiling module isochronous_spill_register
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module prim_subreg
+recompiling module prim_subreg_ext
+recompiling module axi_riscv_atomics_wrap
+recompiling module fpnew_fma_multi
+recompiling module reqrsp_to_axi
+recompiling module axi_atop_filter
+recompiling module fpnew_noncomp
+recompiling module lzc
+recompiling module spill_register
+recompiling package reqrsp_pkg
+recompiling module counter
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module fpnew_opgroup_block
+recompiling module multi_accept_rr_arb
+recompiling module lzc
+recompiling module fpnew_noncomp
+recompiling module stream_fifo_optimal_wrap
+recompiling module stream_fork
+recompiling module tb_memory_regbus
+recompiling module fpnew_classifier
+recompiling package snitch_pma_pkg
+recompiling module axi_cut
+recompiling module AXI_BUS
+recompiling module snitch_hive
+recompiling module axi_lite_to_reg_intf
+recompiling module axi_xbar
+recompiling module fpnew_opgroup_block
+recompiling module onehot_to_bin
+recompiling module stream_fifo
+recompiling module stream_fork
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module delta_counter
+recompiling module shift_reg
+recompiling package snitch_ssr_pkg
+recompiling module idma_inst64_top
+recompiling module axi_to_mem
+recompiling module lzc
+recompiling module rr_arb_tree
+recompiling module idma_legalizer_rw_axi
+recompiling module fifo_v3
+recompiling module reqrsp_demux
+recompiling module axi_burst_splitter_ax_chan
+recompiling module onehot_to_bin
+recompiling module counter
+recompiling module stream_demux
+recompiling module REG_BUS
+recompiling module axi_riscv_atomics_wrap
+recompiling module axi_riscv_amos
+recompiling module stream_arbiter
+recompiling module snitch_icache_handler
+recompiling module lzc
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling package axi_pkg
+recompiling module spill_register
+recompiling module tb_memory_axi
+recompiling module snitch_icache_l0
+recompiling module reqrsp_mux
+recompiling module rr_arb_tree
+recompiling module axi_burst_splitter_counters
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module snitch_icache_refill
+recompiling module snitch_regfile
+recompiling module snitch_barrier
+recompiling module sync
+recompiling package cf_math_pkg
+recompiling module snitch
+recompiling module rr_arb_tree
+recompiling module mem_to_banks_detailed
+recompiling module axi_id_prepend
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module fpnew_sdotp_multi_wrapper
+recompiling module axi_to_tcdm
+recompiling module fpnew_cast_multi
+recompiling module axi_demux_id_counters
+recompiling module fpnew_noncomp
+recompiling module isochronous_spill_register
+recompiling module lzc
+recompiling module stream_join
+recompiling module idma_legalizer_page_splitter
+recompiling module stream_demux
+recompiling module AXI_BUS
+recompiling module fpnew_opgroup_block
+recompiling module id_queue
+recompiling module snitch_ptw
+recompiling module stream_to_mem
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling module prim_subreg
+recompiling module spill_register
+recompiling package riscv_instr_branch
+recompiling module tb_memory_axi
+recompiling module axi_to_mem_interleaved
+recompiling module fpnew_opgroup_block
+recompiling module snitch_amo_shim
+recompiling module snitch_icache_lookup_parallel
+recompiling module fifo_v3
+recompiling module idma_nd_midend
+recompiling module axi_burst_splitter_ax_chan
+recompiling module onehot_to_bin
+recompiling module counter
+recompiling module stream_demux
+recompiling package snitch_icache_pkg
+recompiling module fpnew_fma_multi
+recompiling module snitch_lsu
+recompiling module rr_arb_tree
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module axi_rw_join
+recompiling module axi_riscv_amos_alu
+recompiling module fpnew_classifier
+recompiling module stream_register
+recompiling module prim_subreg_ext
+recompiling module AXI_LITE
+recompiling module axi_demux_id_counters
+recompiling module snitch_tcdm_interconnect
+recompiling module snitch_sequencer
+recompiling module axi_atop_filter
+recompiling module axi_demux_id_counters
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module snitch
+recompiling module snitch_shared_muldiv
+recompiling module fpnew_cast_multi
+recompiling module axi_atop_filter
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module stream_fork_dynamic
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module fpnew_sdotp_multi_wrapper
+recompiling module axi_zero_mem
+recompiling module axi_err_slv
+recompiling module rr_arb_tree
+recompiling module addr_decode_dync
+recompiling module isochronous_spill_register
+recompiling module passthrough_stream_fifo
+recompiling module lzc
+recompiling module idma_transfer_id_gen
+recompiling module delta_counter
+recompiling module stream_demux
+recompiling module REG_BUS
+recompiling module snitch_cc
+recompiling module fpnew_fma_multi
+recompiling module lzc
+recompiling module fpnew_opgroup_block
+recompiling module fifo_v3
+recompiling package snitch_pkg
+recompiling module lzc
+recompiling module snitch_regfile
+recompiling module delta_counter
+recompiling module sync
+recompiling package dm
+recompiling module tb_bin
+recompiling module axi_demux
+recompiling module stream_arbiter
+recompiling module snitch_ssr_streamer
+recompiling module isochronous_spill_register
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module reqrsp_mux
+recompiling module fpnew_classifier
+recompiling package snitch_cluster_peripheral_reg_pkg
+recompiling module snitch_tcdm_interconnect
+recompiling module axi_lite_to_reg_intf
+recompiling module axi_xbar
+recompiling module fpnew_opgroup_block
+recompiling module isochronous_spill_register
+recompiling module onehot_to_bin
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module popcount
+recompiling module shift_reg
+recompiling module axi_demux_id_counters
+recompiling module snitch_ssr
+recompiling module tcdm_mux
+recompiling module fpnew_noncomp
+recompiling module lzc
+recompiling module id_queue
+recompiling package fpnew_pkg
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/bootrom.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/ipc.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/common_lib.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/bootdata.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/rtl_lib.cc
+if [ -x ../bin/snitch_cluster.vcs ]; then chmod a-x ../bin/snitch_cluster.vcs; fi
+g++  -o ../bin/snitch_cluster.vcs      -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/lib -rdynamic -Wl,-rpath='$ORIGIN'/snitch_cluster.vcs.daidir -Wl,-rpath=./snitch_cluster.vcs.daidir -Wl,-rpath=/usr/synopsys/vcs/W-2024.09-1/linux64/lib -L/usr/synopsys/vcs/W-2024.09-1/linux64/lib -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 bootrom.o ipc.o rtl_lib.o common_lib.o bootdata.o   objs/amcQw_d.o  _3287395_archive_1.so _3287765_archive_1.so _3287773_archive_1.so _3287775_archive_1.so _3287777_archive_1.so _3287778_archive_1.so _3287779_archive_1.so _3287780_archive_1.so _3287781_archive_1.so _3287782_archive_1.so _3287783_archive_1.so _3287784_archive_1.so _3287785_archive_1.so _3287786_archive_1.so _3287787_archive_1.so _3287788_archive_1.so _3287789_archive_1.so _3287790_archive_1.so _3287791_archive_1.so _3287792_archive_1.so _3287793_archive_1.so _3287794_archive_1.so _3287795_archive_1.so _3287796_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lerrorinf -lsnpsmalloc -lvfs -lfesvr    -lvcsnew -lsimprofile -lvirsim -luclinative /usr/synopsys/vcs/W-2024.09-1/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../bin/snitch_cluster.vcs.daidir/vc_hdrs.o    /usr/synopsys/vcs/W-2024.09-1/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../bin/snitch_cluster.vcs up to date
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+CPU time: 16.983 seconds to compile + .466 seconds to elab + 6.156 seconds to link

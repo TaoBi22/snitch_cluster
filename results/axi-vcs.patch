@@ -1,0 +1,54 @@
+diff --git a/src/axi_id_serialize.sv b/src/axi_id_serialize.sv
+index 4aa06868..f3409685 100644
+--- a/src/axi_id_serialize.sv
++++ b/src/axi_id_serialize.sv
+@@ -60,7 +60,7 @@ module axi_id_serialize #(
+   /// Number of Entries in the explicit ID map (default: None)
+   parameter int unsigned IdMapNumEntries = 32'd0,
+   /// Explicit ID map; index [0] in each entry is the input ID to match, index [1] the output ID.
+-  parameter int unsigned IdMap [IdMapNumEntries-1:0][0:1] = '{default: {32'b0, 32'b0}},
++  parameter int unsigned IdMap [axi_pkg::iomsb(IdMapNumEntries):0][0:1] = '{default: {32'b0, 32'b0}},
+   /// Spill AR and AW
+   parameter bit          SpillAx = 1'b1,
+   // unused parameters, no longer needed, left for backwards-compatibility
+@@ -355,7 +355,7 @@ module axi_id_serialize_intf #(
+   parameter int unsigned AXI_USER_WIDTH = 32'd0,
+   parameter int unsigned MST_ID_BASE_OFFSET = 32'd0,
+   parameter int unsigned ID_MAP_NUM_ENTRIES = 32'd0,
+-  parameter int unsigned ID_MAP [ID_MAP_NUM_ENTRIES-1:0][0:1] = '{default: {32'b0, 32'b0}},
++  parameter int unsigned ID_MAP [axi_pkg::iomsb(ID_MAP_NUM_ENTRIES):0][0:1] = '{default: {32'b0, 32'b0}},
+   parameter bit          SPILL_AX       = 1'b1,
+   // Now unused, kept for backward compatibility
+   parameter int unsigned AXI_SLV_PORT_MAX_TXNS = 32'd0
+diff --git a/src/axi_pkg.sv b/src/axi_pkg.sv
+index 4102be0e..6e6450bb 100644
+--- a/src/axi_pkg.sv
++++ b/src/axi_pkg.sv
+@@ -532,4 +532,9 @@ package axi_pkg;
+     logic [31:0] end_addr;
+   } xbar_rule_32_t;
+ 
++  // Return either the argument minus 1 or 0 if 0; useful for IO vector width declaration
++  function automatic integer unsigned iomsb (input integer unsigned width);
++      return (width != 32'd0) ? unsigned'(width-1) : 32'd0;
++  endfunction
++
+ endpackage
+diff --git a/src/axi_xbar_unmuxed.sv b/src/axi_xbar_unmuxed.sv
+index a2518770..fdf3de04 100644
+--- a/src/axi_xbar_unmuxed.sv
++++ b/src/axi_xbar_unmuxed.sv
+@@ -287,6 +287,7 @@ endmodule
+ `include "axi/assign.svh"
+ `include "axi/typedef.svh"
+ 
++`ifndef TARGET_VCS // VCS: multi-dimensional interface arrays unsupported (SV-UMDAI); unused in Occamy
+ module axi_xbar_unmuxed_intf
+ import cf_math_pkg::idx_width;
+ #(
+@@ -371,3 +372,5 @@ import cf_math_pkg::idx_width;
+   );
+ 
+ endmodule
++`endif
++

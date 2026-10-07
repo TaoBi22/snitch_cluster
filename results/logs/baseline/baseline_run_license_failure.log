@@ -1,0 +1,218 @@
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/alias.elf
+[runs/vcs/alias]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/alias.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/atomics.elf
+[runs/vcs/atomics]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/atomics.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/barrier.elf
+[runs/vcs/barrier]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/barrier.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/data_mover.elf
+[runs/vcs/data_mover]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/data_mover.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/alias.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/dma_simple.elf
+[runs/vcs/dma_simple]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/dma_simple.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/atomics.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/event_unit.elf
+[runs/vcs/event_unit]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/event_unit.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/barrier.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fence_i.elf
+[runs/vcs/fence_i]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fence_i.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_scalar.elf
+[runs/vcs/fp8_comparison_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_scalar.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_vector.elf
+[runs/vcs/fp8_comparison_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/dma_simple.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_scalar.elf
+[runs/vcs/fp8_computation_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fence_i.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_vector.elf
+[runs/vcs/fp8_computation_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_scalar.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/event_unit.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_scalar.elf
+[runs/vcs/fp8alt_comparison_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_scalar.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_vector.elf
+[runs/vcs/fp8alt_comparison_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_comparison_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_scalar.elf
+[runs/vcs/fp8alt_computation_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_vector.elf
+[runs/vcs/fp8alt_computation_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_scalar.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8_computation_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_scalar.elf
+[runs/vcs/fp16_comparison_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_scalar.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_vector.elf
+[runs/vcs/fp16_comparison_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_comparison_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_scalar.elf
+[runs/vcs/fp16_computation_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_scalar.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/data_mover.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_vector.elf
+[runs/vcs/fp16_computation_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_scalar.elf
+[runs/vcs/fp16alt_comparison_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_comparison_vector.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp8alt_computation_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_vector.elf
+[runs/vcs/fp16alt_comparison_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_vector.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_scalar.elf
+[runs/vcs/fp16alt_computation_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_vector.elf
+[runs/vcs/fp16alt_computation_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_scalar.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16_computation_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_scalar.elf
+[runs/vcs/fp32_comparison_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_scalar.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_vector.elf
+[runs/vcs/fp32_comparison_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_comparison_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_scalar.elf
+[runs/vcs/fp32_computation_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_scalar.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_vector.elf
+[runs/vcs/fp32_computation_vector]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_vector.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_scalar.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp16alt_computation_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_conversions_scalar.elf
+[runs/vcs/fp32_conversions_scalar]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_conversions_scalar.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/interrupt_local.elf
+[runs/vcs/interrupt_local]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/interrupt_local.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_comparison_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/multi_cluster.elf
+[runs/vcs/multi_cluster]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/multi_cluster.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_parallel.elf
+[runs/vcs/openmp_parallel]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_parallel.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_computation_vector.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_for_static_schedule.elf
+[runs/vcs/openmp_for_static_schedule]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_for_static_schedule.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/fp32_conversions_scalar.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_double_buffering.elf
+[runs/vcs/openmp_double_buffering]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_double_buffering.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/multi_cluster.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/perf_cnt.elf
+[runs/vcs/perf_cnt]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/perf_cnt.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_simple.elf
+[runs/vcs/printf_simple]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_simple.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_fmtint.elf
+[runs/vcs/printf_fmtint]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_fmtint.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_simple.elf test failed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/simple.elf
+[runs/vcs/simple]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/simple.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_parallel.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/team_global.elf
+[runs/vcs/team_global]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/team_global.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/simple.elf test failed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/tls.elf
+[runs/vcs/tls]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/tls.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/interrupt_local.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_1.elf
+[runs/vcs/varargs_1]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_1.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_for_static_schedule.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_2.elf
+[runs/vcs/varargs_2]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_2.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/team_global.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/zero_mem.elf
+[runs/vcs/zero_mem]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/zero_mem.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/tls.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/non_null_exitcode.elf
+[runs/vcs/non_null_exitcode]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/non_null_exitcode.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_1.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq.elf
+[runs/vcs/caq]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/varargs_2.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq_frep.elf
+[runs/vcs/caq_frep]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq_frep.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/zero_mem.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/perf_cnt.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy/build/axpy.elf
+[runs/vcs/axpy]$ /home/bea/snitch-axi4-xbars/sc/sw/blas/axpy/scripts/verify.py /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy/build/axpy.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/non_null_exitcode.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/printf_fmtint.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm/build/gemm.elf
+[runs/vcs/gemm]$ /home/bea/snitch-axi4-xbars/sc/sw/blas/gemm/scripts/verify.py /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm/build/gemm.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf
+[runs/vcs/batchnorm]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf
+[runs/vcs/maxpool]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf
+[runs/vcs/concat]$ /home/bea/snitch-axi4-xbars/sc/sw/dnn/concat/scripts/verify.py /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/caq_frep.elf test passed
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf
+[runs/vcs/fused_concat_linear]$ /home/bea/snitch-axi4-xbars/sc/sw/dnn/fused_concat_linear/scripts/verify.py /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation/build/pi_estimation.elf
+[runs/vcs/pi_estimation]$ /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation/build/pi_estimation.elf
+Run test /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax/build/atax.elf
+[runs/vcs/atax]$ /home/bea/snitch-axi4-xbars/sc/sw/apps/atax/scripts/verify.py /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/util/../bin/snitch_cluster.vcs /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax/build/atax.elf
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm/build/batchnorm.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy/build/axpy.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat/build/concat.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation/build/pi_estimation.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax/build/atax.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests/build/openmp_double_buffering.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool/build/maxpool.elf test passed
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/build/fused_concat_linear.elf test passed
+Terminate processes
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm/build/gemm.elf test failed
+==== Test summary ====
++----------------------------+----------+-----------+--------+--------------+----------------------+
+|            test            | launched | completed | passed | CPU time [s] | simulation time [ns] |
++----------------------------+----------+-----------+--------+--------------+----------------------+
+|           alias            |   True   |    True   |  True  |     0.44     |        2400.0        |
+|          atomics           |   True   |    True   |  True  |     0.45     |        2400.0        |
+|          barrier           |   True   |    True   |  True  |     0.4      |        1600.0        |
+|         dma_simple         |   True   |    True   |  True  |     0.52     |        2800.0        |
+|          fence_i           |   True   |    True   |  True  |     0.42     |        4000.0        |
+|   fp8_comparison_scalar    |   True   |    True   |  True  |     0.46     |        1600.0        |
+|         event_unit         |   True   |    True   |  True  |     0.78     |        6000.0        |
+|   fp8_comparison_vector    |   True   |    True   |  True  |     0.54     |        1800.0        |
+|   fp8_computation_scalar   |   True   |    True   |  True  |     0.53     |        1800.0        |
+|  fp8alt_comparison_scalar  |   True   |    True   |  True  |     0.46     |        1600.0        |
+|   fp8_computation_vector   |   True   |    True   |  True  |     0.7      |        2200.0        |
+|  fp8alt_comparison_vector  |   True   |    True   |  True  |     0.53     |        1800.0        |
+| fp8alt_computation_scalar  |   True   |    True   |  True  |     0.53     |        1800.0        |
+|         data_mover         |   True   |    True   |  True  |     2.56     |       34000.0        |
+|   fp16_comparison_scalar   |   True   |    True   |  True  |     0.48     |        1600.0        |
+|   fp16_comparison_vector   |   True   |    True   |  True  |     0.51     |        1800.0        |
+| fp8alt_computation_vector  |   True   |    True   |  True  |     0.7      |        2200.0        |
+|  fp16_computation_scalar   |   True   |    True   |  True  |     0.53     |        1800.0        |
+| fp16alt_comparison_scalar  |   True   |    True   |  True  |     0.45     |        1600.0        |
+|  fp16_computation_vector   |   True   |    True   |  True  |     0.65     |        2200.0        |
+| fp16alt_comparison_vector  |   True   |    True   |  True  |     0.51     |        1800.0        |
+| fp16alt_computation_scalar |   True   |    True   |  True  |     0.53     |        1800.0        |
+|   fp32_comparison_scalar   |   True   |    True   |  True  |     0.46     |        1600.0        |
+| fp16alt_computation_vector |   True   |    True   |  True  |     0.67     |        2200.0        |
+|   fp32_comparison_vector   |   True   |    True   |  True  |     0.51     |        1800.0        |
+|  fp32_computation_scalar   |   True   |    True   |  True  |     0.53     |        1800.0        |
+|  fp32_computation_vector   |   True   |    True   |  True  |     0.63     |        2200.0        |
+|  fp32_conversions_scalar   |   True   |    True   |  True  |     0.6      |        2000.0        |
+|       multi_cluster        |   True   |    True   |  True  |     0.48     |        2600.0        |
+|      openmp_parallel       |   True   |    True   |  True  |     0.99     |        8400.0        |
+|      interrupt_local       |   True   |    True   |  True  |     1.79     |       20200.0        |
+| openmp_for_static_schedule |   True   |    True   |  True  |     1.47     |       11400.0        |
+|        team_global         |   True   |    True   |  True  |     0.38     |        1400.0        |
+|            tls             |   True   |    True   |  True  |     0.42     |        1600.0        |
+|         varargs_1          |   True   |    True   |  True  |     0.44     |        1600.0        |
+|         varargs_2          |   True   |    True   |  True  |     0.46     |        1600.0        |
+|          zero_mem          |   True   |    True   |  True  |     0.48     |        2000.0        |
+|          perf_cnt          |   True   |    True   |  True  |     2.13     |       33200.0        |
+|     non_null_exitcode      |   True   |    True   |  True  |     0.38     |        1400.0        |
+|       printf_fmtint        |   True   |    True   |  True  |     1.83     |       25200.0        |
+|            caq             |   True   |    True   |  True  |     0.57     |        1800.0        |
+|          caq_frep          |   True   |    True   |  True  |     0.7      |        2200.0        |
+|         batchnorm          |   True   |    True   |  True  |     1.48     |        4600.0        |
+|            axpy            |   True   |    True   |  True  |     0.53     |        1800.0        |
+|           concat           |   True   |    True   |  True  |     0.44     |        1600.0        |
+|       pi_estimation        |   True   |    True   |  True  |     3.41     |        6000.0        |
+|            atax            |   True   |    True   |  True  |     0.75     |        2000.0        |
+|  openmp_double_buffering   |   True   |    True   |  True  |     7.69     |       26400.0        |
+|          maxpool           |   True   |    True   |  True  |     4.8      |       11200.0        |
+|    fused_concat_linear     |   True   |    True   |  True  |     3.56     |        6600.0        |
+|       printf_simple        |   True   |    True   | False  |     None     |         None         |
+|           simple           |   True   |    True   | False  |     None     |         None         |
+|            gemm            |   True   |    True   | False  |     None     |         None         |
++----------------------------+----------+-----------+--------+--------------+----------------------+

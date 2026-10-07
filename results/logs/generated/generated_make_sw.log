@@ -1,0 +1,91 @@
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+error[E31]: File /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/snitch_cluster_wrapper.sv doesn't exist.
+make -C sw/math all
+make -C sw/runtime/banshee all
+make -C sw/runtime/rtl all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/banshee'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/banshee'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/math'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/runtime/rtl'
+make -C sw/apps/lto all
+make -C sw/apps/nop all
+make -C sw/apps/blas/axpy all
+make -C sw/apps/blas/gemm all
+make -C sw/apps/dnn/batchnorm all
+make -C sw/apps/dnn/conv2d all
+make -C sw/apps/dnn/fusedconv all
+make -C sw/apps/dnn/gelu all
+make -C sw/apps/dnn/layernorm all
+make -C sw/apps/dnn/maxpool all
+make -C sw/apps/dnn/softmax all
+make -C sw/apps/dnn/flashattention_2 all
+make -C sw/apps/dnn/concat all
+make -C sw/apps/dnn/fused_concat_linear all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/nop'
+make[1]: Nothing to be done for 'all'.
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/lto'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/nop'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/lto'
+make -C sw/apps/montecarlo/pi_estimation all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/gemm'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy'
+make[1]: Nothing to be done for 'all'.
+make -C sw/apps/atax all
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/blas/axpy'
+make -C sw/apps/correlation all
+make -C sw/apps/covariance all
+make -C sw/tests all
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fusedconv'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/conv2d'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/batchnorm'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/gelu'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/layernorm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/layernorm'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/montecarlo/pi_estimation'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/maxpool'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/correlation'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/correlation'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/atax'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/covariance'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax'
+make[1]: Nothing to be done for 'all'.
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/covariance'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/softmax'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/flashattention_2'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/concat'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/apps/dnn/fused_concat_linear'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/sw/tests'

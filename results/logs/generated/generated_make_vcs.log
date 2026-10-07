@@ -1,0 +1,463 @@
+/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../util/clustergen.py -c cfg/lru.hjson -o /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated --bootdata
+mkdir -p work/
+wget -O work//35d50bc40e59ea1d5566fbd3d9226023821b1bb6 https://github.com/riscv/riscv-isa-sim/tarball/35d50bc40e59ea1d5566fbd3d9226023821b1bb6
+--2026-09-30 09:38:37--  https://github.com/riscv/riscv-isa-sim/tarball/35d50bc40e59ea1d5566fbd3d9226023821b1bb6
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://github.com/riscv-software-src/riscv-isa-sim/tarball/35d50bc40e59ea1d5566fbd3d9226023821b1bb6 [following]
+--2026-09-30 09:38:38--  https://github.com/riscv-software-src/riscv-isa-sim/tarball/35d50bc40e59ea1d5566fbd3d9226023821b1bb6
+Reusing existing connection to github.com:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/riscv-software-src/riscv-isa-sim/legacy.tar.gz/35d50bc40e59ea1d5566fbd3d9226023821b1bb6 [following]
+--2026-09-30 09:38:38--  https://codeload.github.com/riscv-software-src/riscv-isa-sim/legacy.tar.gz/35d50bc40e59ea1d5566fbd3d9226023821b1bb6
+Resolving codeload.github.com (codeload.github.com)... 140.82.121.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.121.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: ‘work//35d50bc40e59ea1d5566fbd3d9226023821b1bb6’
+
+     0K .......... .......... .......... .......... .......... 1.95M
+    50K .......... .......... .......... .......... .......... 3.90M
+   100K .......... .......... .......... .......... .......... 43.2M
+   150K .......... .......... .......... .......... .......... 4.36M
+   200K .......... .......... .......... .......... .......... 50.7M
+   250K .......... .......... .......... .......... .......... 57.1M
+   300K .......... .......... .......... .......... .......... 45.1M
+   350K .......... .......... .......... .                     46.8M=0.05s
+
+2026-09-30 09:38:38 (6.98 MB/s) - ‘work//35d50bc40e59ea1d5566fbd3d9226023821b1bb6’ saved [390604]
+
+tar xfm work/35d50bc40e59ea1d5566fbd3d9226023821b1bb6 --strip-components=1 -C work/
+touch work/35d50bc40e59ea1d5566fbd3d9226023821b1bb6_unzip
+cd work// && ./configure --prefix `pwd`
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for ar... ar
+checking for ranlib... ranlib
+checking for dtc... /home/bea/tools/dtc/bin/dtc
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ANSI C header files... (cached) yes
+checking for __int128_t... yes
+checking whether the linker accepts -Wl,--export-dynamic... yes
+configure: configuring default subproject : fesvr
+checking for pthread_create in -lpthread... yes
+configure: configuring default subproject : riscv
+checking for library containing dlopen... none required
+checking for pthread_create in -lpthread... (cached) yes
+configure: configuring default subproject : disasm
+configure: configuring default subproject : customext
+configure: configuring default subproject : fdt
+configure: configuring default subproject : softfloat
+configure: configuring default subproject : spike_main
+configure: configuring default subproject : spike_dasm
+configure: creating ./config.status
+config.status: creating fesvr.mk
+config.status: creating riscv.mk
+config.status: creating disasm.mk
+config.status: creating customext.mk
+config.status: creating fdt.mk
+config.status: creating softfloat.mk
+config.status: creating spike_main.mk
+config.status: creating spike_dasm.mk
+config.status: creating Makefile
+config.status: creating riscv-fesvr.pc
+config.status: creating riscv-disasm.pc
+config.status: creating config.h
+make -C work/ install-config-hdrs install-hdrs libfesvr.a
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work'
+Makefile:349: warning: overriding recipe for target 'disasm.o'
+Makefile:349: warning: ignoring old recipe for target 'disasm.o'
+./scripts/mk-install-dirs.sh /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include
+mkdir /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include
+for dir in fesvr       ; \
+  do \
+	./scripts/mk-install-dirs.sh /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/$dir; \
+    /usr/bin/install -c -m 644 config.h /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/$dir; \
+  done
+mkdir /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/fesvr
+./scripts/mk-install-dirs.sh /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include
+for file in fesvr/byteorder.h fesvr/elf.h fesvr/elfloader.h fesvr/htif.h fesvr/dtm.h fesvr/memif.h fesvr/syscall.h fesvr/context.h fesvr/htif_pthread.h fesvr/htif_hexwriter.h fesvr/option_parser.h fesvr/term.h fesvr/device.h fesvr/rfb.h fesvr/tsi.h riscv/mmio_plugin.h; \
+  do \
+	./scripts/mk-install-dirs.sh /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/`dirname $file`; \
+    /usr/bin/install -c -m 644 ./$file /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/`dirname $file`; \
+  done
+mkdir /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include/riscv
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/elfloader.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/htif.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/memif.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/dtm.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/syscall.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/device.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/rfb.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/context.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/htif_pthread.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/htif_hexwriter.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/dummy.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/option_parser.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/term.cc
+g++ -MMD -MP  -DPREFIX=\"/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work\" -Wall -Wno-unused -g -O2 -std=c++11 -g -O2   -I. -I. -I./fesvr -I./riscv -I./disasm -I./customext -I./fdt -I./softfloat -I./spike_main -I./spike_dasm -fPIC -c ./fesvr/tsi.cc
+ar rcs libfesvr.a elfloader.o htif.o memif.o dtm.o syscall.o device.o rfb.o context.o htif_pthread.o htif_hexwriter.o dummy.o option_parser.o term.o tsi.o
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work'
+mkdir -p work/lib/
+cp work/libfesvr.a work/lib/libfesvr.a
+mkdir -p bin
+vcs -j24 -ignore initializer_driver_checks -Mlib=work-vcs -Mdir=work-vcs -o bin/snitch_cluster.vcs -cc cc -cpp g++ \
+	-assert disable_cover -override_timescale=1ns/1ps -full64 tb_bin /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/bootrom.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/ipc.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/rtl_lib.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/common_lib.cc /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/bootdata.cc \
+	-CFLAGS "-std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test" -LDFLAGS "-L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/lib" -lfesvr
+/usr/synopsys/vcs/W-2024.09-1/bin/vcsMsgReport: line 276: /usr/synopsys/vcs/W-2024.09-1/linux/bin/vcsMsgReport1: No such file or directory
+Doing common elaboration 
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'AlmaLinux release 9.8 (Olive Jaguar)' is not supported on 
+  'x86_64' officially, assuming linux compatibility by default. Set 
+  VCS_ARCH_OVERRIDE to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+*** Using c compiler cc instead of cc ...
+                         Chronologic VCS (TM)
+        Version W-2024.09-1_Full64 -- Wed Sep 30 09:38:49 2026
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Top Level Modules:
+       tb_bin
+TimeScale is 1 ns / 1 ps
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+113 modules and 0 UDP read.
+recompiling module axi_burst_splitter_counters
+recompiling module axi_lite_to_reg
+recompiling module fpnew_cast_multi
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module axi_rw_join
+recompiling module axi_riscv_amos_alu
+recompiling module fpnew_classifier
+recompiling module stream_register
+recompiling module prim_subreg_ext
+recompiling module AXI_LITE
+recompiling module axi_mux
+recompiling module reqrsp_mux
+recompiling module snitch_ptw
+recompiling module stream_to_mem
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module idma_inst64_events
+recompiling module lzc
+recompiling module counter
+recompiling module axi_cut
+recompiling package idma_pkg
+recompiling module snitch_cluster_wide_xbar
+recompiling module axi_to_tcdm
+recompiling module stream_arbiter
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module stream_fifo_optimal_wrap
+recompiling module stream_fork
+recompiling module tb_memory_regbus
+recompiling module fpnew_classifier
+recompiling package snitch_pma_pkg
+recompiling module axi_cut
+recompiling module AXI_BUS
+recompiling module axi_riscv_atomics_wrap
+recompiling module axi_riscv_amos
+recompiling module mem_to_banks_detailed
+recompiling module axi_id_prepend
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling package snitch_cluster_pkg
+recompiling module spill_register
+recompiling module snitch
+recompiling module snitch_shared_muldiv
+recompiling module snitch_sequencer
+recompiling module axi_atop_filter
+recompiling module fpnew_noncomp
+recompiling module lzc
+recompiling module spill_register
+recompiling package reqrsp_pkg
+recompiling module counter
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module idma_inst64_top
+recompiling module snitch_icache_l0
+recompiling module lzc
+recompiling module rr_arb_tree
+recompiling module idma_legalizer_rw_axi
+recompiling module fifo_v3
+recompiling module idma_nd_midend
+recompiling module axi_burst_splitter_ax_chan
+recompiling module onehot_to_bin
+recompiling module counter
+recompiling module stream_demux
+recompiling package cf_math_pkg
+recompiling module axi_burst_splitter_counters
+recompiling module mem_wide_narrow_mux
+recompiling module reqrsp_iso
+recompiling module lzc
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module axi_res_tbl
+recompiling module snitch_l0_tlb
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module axi_cut
+recompiling package riscv_instr
+recompiling module axi_mux
+recompiling module id_queue
+recompiling module stream_arbiter
+recompiling module snitch_icache_handler
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling module prim_subreg
+recompiling module spill_register
+recompiling package idma_inst64_snitch_pkg
+recompiling module snitch_hive
+recompiling module axi_demux
+recompiling module axi_demux_id_counters
+recompiling module fpnew_opgroup_block
+recompiling module onehot_to_bin
+recompiling module isochronous_spill_register
+recompiling module onehot_to_bin
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module popcount
+recompiling module shift_reg
+recompiling module snitch_cluster_narrow_xbar
+recompiling module axi_zero_mem
+recompiling module multi_accept_rr_arb
+recompiling module lzc
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module stream_join
+recompiling module idma_legalizer_page_splitter
+recompiling module stream_demux
+recompiling module REG_BUS
+recompiling module tb_memory_axi
+recompiling module axi_lite_to_reg_intf
+recompiling module reqrsp_mux
+recompiling module rr_arb_tree
+recompiling module axi_burst_splitter_counters
+recompiling module isochronous_spill_register
+recompiling package snitch_pkg
+recompiling module lzc
+recompiling module snitch_regfile
+recompiling module delta_counter
+recompiling module sync
+recompiling package dm
+recompiling module fpnew_fma_multi
+recompiling module snitch_lsu
+recompiling module axi_err_slv
+recompiling module reqrsp_to_tcdm
+recompiling module lfsr_sr
+recompiling module fifo_v3
+recompiling module axi_res_tbl
+recompiling module snitch_l0_tlb
+recompiling module fpnew_classifier
+recompiling module counter
+recompiling module prim_subreg_ext
+recompiling module AXI_LITE
+recompiling module fpnew_opgroup_block
+recompiling module id_queue
+recompiling module fpnew_opgroup_block
+recompiling module axi_id_prepend
+recompiling module lzc
+recompiling module fifo_v3
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling package axi_pkg
+recompiling module spill_register
+recompiling package riscv_instr_branch
+recompiling module axi_to_reg
+recompiling module axi_riscv_amos
+recompiling module fpnew_cast_multi
+recompiling module axi_atop_filter
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module axi_multicut
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module snitch_cluster_peripheral
+recompiling module axi_demux_id_counters
+recompiling module snitch_ssr
+recompiling module rr_arb_tree
+recompiling module isochronous_spill_register
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module reqrsp_mux
+recompiling module fpnew_classifier
+recompiling package snitch_cluster_peripheral_reg_pkg
+recompiling module snitch
+recompiling module rr_arb_tree
+recompiling module reqrsp_to_axi
+recompiling module axi_atop_filter
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module spill_register
+recompiling module stream_fork_dynamic
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module fpnew_sdotp_multi_wrapper
+recompiling module axi_to_mem_interleaved
+recompiling module axi_err_slv
+recompiling module rr_arb_tree
+recompiling module addr_decode_dync
+recompiling module fifo_v3
+recompiling module reqrsp_demux
+recompiling module axi_burst_splitter_ax_chan
+recompiling module onehot_to_bin
+recompiling module counter
+recompiling module stream_demux
+recompiling package snitch_icache_pkg
+recompiling module fpnew_opgroup_block
+recompiling module rr_arb_tree
+recompiling module tc_sram_impl
+recompiling module fpnew_noncomp
+recompiling module stream_fifo_optimal_wrap
+recompiling module onehot_to_bin
+recompiling module tb_memory_regbus
+recompiling module fpnew_classifier
+recompiling module stream_register
+recompiling module axi_cut
+recompiling module AXI_BUS
+recompiling module fpnew_sdotp_multi_wrapper
+recompiling module axi_to_mem
+recompiling module fpnew_cast_multi
+recompiling module axi_demux_id_counters
+recompiling module fpnew_noncomp
+recompiling module fifo_v3
+recompiling module passthrough_stream_fifo
+recompiling module lzc
+recompiling module idma_transfer_id_gen
+recompiling module delta_counter
+recompiling module stream_demux
+recompiling module REG_BUS
+recompiling module tb_memory_axi
+recompiling module fpnew_fma_multi
+recompiling module fpnew_opgroup_block
+recompiling module snitch_amo_shim
+recompiling module snitch_icache_lookup_parallel
+recompiling module stream_fifo
+recompiling module lzc
+recompiling module snitch_icache_refill
+recompiling module snitch_regfile
+recompiling module snitch_barrier
+recompiling module sync
+recompiling module snitch_cc
+recompiling module axi_lite_to_reg_intf
+recompiling module lzc
+recompiling module fpnew_opgroup_block
+recompiling module isochronous_spill_register
+recompiling module stream_fork
+recompiling module lzc
+recompiling module fpnew_classifier
+recompiling module delta_counter
+recompiling module shift_reg
+recompiling package snitch_ssr_pkg
+recompiling module tb_bin
+recompiling module axi_demux_id_counters
+recompiling module snitch_tcdm_interconnect
+recompiling module stream_arbiter
+recompiling module snitch_ssr_streamer
+recompiling module lzc
+recompiling module id_queue
+recompiling package fpnew_pkg
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+recompiling module snitch_tcdm_interconnect
+recompiling module axi_demux
+recompiling module stream_arbiter
+recompiling module fpnew_opgroup_block
+recompiling module isochronous_spill_register
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module prim_subreg
+recompiling module prim_subreg_ext
+recompiling module axi_riscv_atomics_wrap
+recompiling module fpnew_fma_multi
+recompiling module tcdm_mux
+recompiling module fpnew_noncomp
+recompiling module axi_demux_id_counters
+recompiling module id_queue
+recompiling module spill_register
+recompiling module fpnew_classifier
+recompiling module fpnew_rounding
+recompiling module fpnew_classifier
+recompiling module spill_register
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+make[1]: Entering directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/bootrom.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/ipc.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/common_lib.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test/rtl_lib.cc
+g++ -w  -fPIC -std=c++14 -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster//test -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/include -I/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/../../target/common/test -O -I/usr/synopsys/vcs/W-2024.09-1/include    -c /home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/generated/bootdata.cc
+if [ -x ../bin/snitch_cluster.vcs ]; then chmod a-x ../bin/snitch_cluster.vcs; fi
+g++  -o ../bin/snitch_cluster.vcs      -L/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work/lib -rdynamic -Wl,-rpath='$ORIGIN'/snitch_cluster.vcs.daidir -Wl,-rpath=./snitch_cluster.vcs.daidir -Wl,-rpath=/usr/synopsys/vcs/W-2024.09-1/linux64/lib -L/usr/synopsys/vcs/W-2024.09-1/linux64/lib -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 bootrom.o ipc.o rtl_lib.o common_lib.o bootdata.o   objs/amcQw_d.o  _3089031_archive_1.so _3089420_archive_1.so _3089421_archive_1.so _3089422_archive_1.so _3089423_archive_1.so _3089424_archive_1.so _3089425_archive_1.so _3089426_archive_1.so _3089427_archive_1.so _3089428_archive_1.so _3089429_archive_1.so _3089430_archive_1.so _3089431_archive_1.so _3089432_archive_1.so _3089433_archive_1.so _3089434_archive_1.so _3089435_archive_1.so _3089436_archive_1.so _3089437_archive_1.so _3089438_archive_1.so _3089439_archive_1.so _3089440_archive_1.so _3089441_archive_1.so _3089442_archive_1.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lerrorinf -lsnpsmalloc -lvfs -lfesvr    -lvcsnew -lsimprofile -lvirsim -luclinative /usr/synopsys/vcs/W-2024.09-1/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../bin/snitch_cluster.vcs.daidir/vc_hdrs.o    /usr/synopsys/vcs/W-2024.09-1/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../bin/snitch_cluster.vcs up to date
+make[1]: Leaving directory '/home/bea/snitch-axi4-xbars/sc/target/snitch_cluster/work-vcs'
+CPU time: 17.177 seconds to compile + .553 seconds to elab + 4.250 seconds to link
